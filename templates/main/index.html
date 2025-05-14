@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}Home | IndoplanetX{% endblock %}
+{% load static %}
+{% block body %}
+<header class="flex flex-col lg:flex-row lg:min-h-[70vh] mt-[10vh]">
+    <div id="left" class="w-full lg:w-2/3 p-8 flex flex-col items-start lg:justify-between space-y-4 ">
+        <div>
+            <h1 class="lg:text-[100px] text-[40px]">Where Innovation Meets Ignition.</h1>
+            <p class="text-sm lg:text-base">
+                Launch into the future with ISVRx, where cutting-edge propulsion meets India's legacy of innovation.
+                Our semi-cryogenic rocket engine is crafted for the pioneers of space, designed to push the limits
+                of what's possible.
+            </p>
+        </div>
+        <div class="">
+            <a href="#" class="flex"><span class="underline">Discover ISVRx</span> <img src="{% static 'assets/northeast.png' %}"
+                    alt="↗"></a>
+        </div>
+    </div>
+    <div id="right" class="w-full lg:w-1/3 p-3 flex flex-col justify-between items-center">
+        <div class="flex-block"></div>
+        
+        <img src="{% static 'assets/moon.jpg' %}" alt="" class="lg:w-[400px] md:w-[600px]">
+    </div>
+</header>
+<section id="about" class="px-8 pt-10 flex flex-col space-y-8">
+    <div class="flex flex-col items-start">
+        <span class="text-gray-600 text-sm">Powering the Future of Space Exploration</span>
+        <h1 class="text-[60px]">Spacetech Redefined</h1>
+    </div>
+    <p class="w-full lg:w-[60%]">
+        At ISVRx, we believe that the future of space begins with redefining the technology that drives it. Our
+        cutting-edge semi-cryogenic rocket engines challenge the status quo, blending breakthrough engineering with
+        efficiency, reliability, and sustainability. We are pioneering a new era where access to space is no longer
+        a privilege but an opportunity for all.
+    </p>
+    <a href="#" class="flex"><span class="underline">Discover Our Innovation</span> <img src="{% static 'assets/northeast.png' %}"
+            alt="↗"></a>
+    <div class="flex flex-col md:flex-row md:space-x-4">
+        <div class="w-full md:w-[70%] bg-cover bg-center rounded-lg flex flex-col items-start justify-between min-h-[95vh]"
+     style="background-image: url('{% static 'assets/rocket.avif' %}'); border-radius: 10px;">
+
+            <div class="flex-block min-h-[20vh] lg:min-h-[55vh]"></div>
+            <div
+                class="flex flex-col bg-white space-y-4 md:space-y-10 p-6 mt-4 ml-4 md:ml-8 rounded-br-lg rounded-tl-lg border-b border-r border-gray-400 h-full lg:h-[40vh] ">
+                <h1 class="text-3xl">Pioneering the Future of Space Propulsion with Semi-Cryogenic Technology</h1>
+                <p>
+                    At the heart of ISVRx's propulsion system is our groundbreaking semi-cryogenic rocket engine,
+                    designed to revolutionize the space industry. Powered by liquid kerosene (RP-1) and liquid
+                    oxygen (LOX), this engine offers exceptional performance, increased efficiency, and
+                    cost-effectiveness compared to traditional cryogenic and solid-fuel engines.
+                </p>
+            </div>
+        </div>
+        <div class="w-full md:w-[30%] flex flex-col space-y-4 mt-4 lg:mt-0">
+            <div class="min-h-[47vh] bg-gray-200 rounded-lg">
+                <img src="{% static 'assets/drone.avif' %}" alt="" class="rounded-tl-lg rounded-tr-lg h-[150px] w-full object-cover">
+                <div class="p-4 flex flex-col space-y-4">
+                    <h1 class="text-2xl">Revolutionizing Drone Flight with Advanced Hydrogen Fuel Cells</h1>
+                    <p>
+                        ISVRx has developed an innovative hydrogen fuel cell for drones that extends flight time by
+                        up to 10 times compared to conventional battery-powered systems. This technology leverages
+                        the clean energy of hydrogen to provide drones with an efficient, sustainable power source.
+                    </p>
+                </div>
+            </div>
+            <div class="min-h-[47vh] bg-black text-white rounded-lg">
+                <img src="{% static 'assets/satellite.avif' %}" alt=""
+                    class="rounded-tl-lg rounded-tr-lg h-[150px] w-full object-cover">
+                <div class="p-4 flex flex-col space-y-4">
+                    <h1 class="text-2xl">Ensuring Satellite Longevity with AI-Powered Self-Repair Systems</h1>
+                    <p>
+                        In a world where satellite reliability is critical, ISVRx is integrating AI-powered fault
+                        detection and autonomous repair technologies to transform satellite maintenance. Our
+                        cutting-edge AI system continuously monitors satellite health, identifying potential faults
+                        in real-time with unmatched accuracy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="precision"
+    class="flex flex-col md:flex-row space-y-8 md:space-y-0 justify-between items-start px-8 py-[50px] md:py-[100px]">
+    <div class="w-full md:w-1/2">
+        <h1 class="text-3xl md:text-[40px]">A New Height of Precision</h1>
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col items-start space-y-2">
+        <p>
+            At ISVRx, every component is engineered with uncompromising accuracy to ensure peak performance in the
+            most demanding environments. From propulsion systems to intelligent satellite diagnostics, our
+            technologies are built to operate flawlessly.
+        </p>
+        <div class="">
+            <a href="#" class="flex"><span class="underline">Let's Work Together</span> <img
+                    src="{% static 'assets/northeast.png' %}" alt="↗"></a>
+        </div>
+    </div>
+</section>
+<section id="mission" class="flex flex-col md:flex-row py-10">
+    <div class="w-full md:w-[60%] flex flex-col items-start space-y-4 px-8">
+        <p class="text-sm text-gray-600">Our mission</p>
+        <h1 class="text-3xl">Igniting a Bold Tomorrow</h1>
+        <ul class="space-y-2">
+            <li>
+                <h1 class="text-lg font-semibold"><i class="fa-solid fa-arrow-right"></i> Revolutionizing Space Access
+                </h1>
+            </li>
+            <li class="pl-12">
+                To drive the next chapter of space exploration through high-performance, sustainable propulsion
+                systems that make space more accessible, affordable, and frequent.
+            </li>
+            <li>
+                <h1 class="text-lg font-semibold"><i class="fa-solid fa-arrow-right"></i> Engineering Next-Gen
+                    Propulsion</h1>
+            </li>
+            <li class="pl-12">
+                To design and develop advanced semi-cryogenic engines and clean energy technologies that deliver
+                unmatched efficiency, reliability, and thrust for modern space missions.
+            </li>
+            <li>
+                <h1 class="text-lg font-semibold"><i class="fa-solid fa-arrow-right"></i> Empowering Global Ambitions
+                </h1>
+            </li>
+            <li class="pl-12">
+                To position India as a global leader in space propulsion by building solutions that meet and exceed
+                international standards while serving diverse markets and missions.
+            </li>
+            <li>
+                <h1 class="text-lg font-semibold"><i class="fa-solid fa-arrow-right"></i> Enabling a Spacefaring
+                    Ecosystem</h1>
+            </li>
+            <li class="pl-12">
+                To support a wide spectrum of use cases—from commercial satellite launches and national defense to
+                deep-space missions—by delivering scalable and mission-ready propulsion platforms.
+            </li>
+            <li>
+                <h1 class="text-lg font-semibold"><i class="fa-solid fa-arrow-right"></i> Building More Than Engines
+                </h1>
+            </li>
+            <li class="pl-8">
+                To ignite a future where innovation, accessibility, and sustainability power humanity's journey
+                beyond Earth.
+            </li>
+        </ul>
+    </div>
+    <div id="right" class="w-full lg:w-[40%] mt-8 md:mt-0 px-4 flex justify-between items-end">
+        <img src="{% static 'assets/mission.avif' %}" alt="" class="h-full aspect-square object-cover md:rounded-lg">
+    </div>
+</section>
+{% endblock %}

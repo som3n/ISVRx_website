@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/static/images.png">
+
+</head>
+
+<body class="">
+    <nav class="py-4 fixed top-0 left-0 right-0 z-50 bg-white">
+        <div class="px-8 py-4 flex justify-between items-center">
+            {% load static %}
+            <div class="text-2xl"><a href="/" class="flex space-x-1"><img src="{% static 'images.png' %}" alt="Logo"
+                        class="w-[30px] aspect-square"><span>IndoplanetXSVR</span></a></div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="/" class="hover:text-gray-600">Home</a>
+                <a href="/about" class="hover:text-gray-600">About</a>
+                <a href="/training" class="hover:text-gray-600">Training</a>
+                <a href="/join-us" class="hover:text-gray-600">Join Us</a>
+                <a href="/contact"
+                    class="hover:bg-gray-400 px-6 py-3 rounded-lg border border-gray-400 transition-color duration-800">Contact
+                    Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <img src="./assets/menu.png" alt="">
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed bg-white w-screen top-16">
+            <a href="/" class="block px-8 py-2 hover:bg-stone-700">Home</a>
+            <a href="/about" class="block px-8 py-2 hover:bg-stone-700">About</a>
+            <a href="/training" class="block px-8 py-2 hover:bg-stone-700">Training</a>
+            <a href="/join-us" class="block px-8 py-2 hover:bg-stone-700">Join Us</a>
+            <a href="/contact" class="block px-8 py-2 hover:bg-stone-700">Contacts</a>
+        </div>
+    </nav>
+    {% block body %}{% endblock %}
+    <footer class="bg-gray-200 px-8 py-8 mt-4 flex flex-col space-y-4">
+        <div class="flex flex-col md:flex-row">
+            <div id="left" class="w-full lg:w-[40%] flex flex-col space-y-4 items-start">
+                <h1 class="text-2xl md:text-3xl font-semibold">IndoplanetXSVR</h1>
+                <div class="text-lg md:text-xl">About Us</div>
+                <p class="text-sm lg:text-justify">
+                    We combine India's rich legacy in space exploration with cutting-edge propulsion technology to
+                    create
+                    rocket engines that redefine space travel. Our mission is to make space more accessible, efficient,
+                    and
+                    sustainable, empowering the pioneers of tomorrow with the tools they need to reach beyond the stars.
+                </p>
+            </div>
+            <div class="md:w-[15%] w-full md:px-8 mt-4 md:mt-0 ">
+                <h1 class="text-xl text-gray-800 font-semibold mb-4">Company</h1>
+                <ul class="flex flex-col items-start space-y-3">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About Us</a></li>
+                    <li><a href="/">Career</a></li>
+                </ul>
+            </div>
+            <div class="md:w-[15%] w-full md:px-8 mt-4 md:mt-0 ">
+                <h1 class="text-xl text-gray-800 font-semibold mb-4">Services</h1>
+                <ul class="flex flex-col items-start space-y-3">
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Join Us</a></li>
+                    <li><a href="/">Lab Setup</a></li>
+                    <li><a href="/">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="md:w-[15%] w-full md:px-8 mt-4 md:mt-0 ">
+                <h1 class="text-xl text-gray-800 font-semibold mb-4">Other</h1>
+                <ul class="flex flex-col items-start space-y-3">
+                    <li><a href="/">Privacy Policy</a></li>
+                    <li><a href="/">Terms and Condition</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex flex-col space-y-4 my-8">
+            <h3 class="text-xl">Follow Us</h3>
+            <ul class="flex space-x-4">
+                <li><a href="/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="/"></a><i class="fa-brands fa-x-twitter"></i></li>
+                <li><a href="/"></a><i class="fa-brands fa-instagram"></i></li>
+                <li><a href="/"></a><i class="fa-brands fa-facebook"></i></li>
+            </ul>
+        </div>
+        <div class="flex w-full justify-around items-center border-t pt-2 -mb-6">
+            <p class="text-[10px]">Handcoded with ❤️ by <a
+                    href="https://www.linkedin.com/in/somensamantacse/">@Somen</a></p>
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
